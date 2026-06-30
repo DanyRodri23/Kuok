@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../widgets/login_form.dart';
+import '../widgets/login_header.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
@@ -8,11 +9,23 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
+      backgroundColor: Color(0xFF0D0D0D),
       body: SafeArea(
-        child: Center(
-          child: SingleChildScrollView(
-            padding: EdgeInsets.all(24),
-            child: LoginForm(),
+        child: Padding(
+          padding: EdgeInsets.symmetric(
+            horizontal: 28,
+            vertical: 18,
+          ),
+          child: Column(
+            children: [
+              LoginHeader(),
+
+              SizedBox(height: 18),
+
+              Expanded(
+                child: LoginForm(),
+              ),
+            ],
           ),
         ),
       ),

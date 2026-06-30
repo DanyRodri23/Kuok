@@ -32,12 +32,73 @@ class CustomTextField extends StatelessWidget {
       keyboardType: keyboardType,
       validator: validator,
       onChanged: onChanged,
+      style: const TextStyle(
+        color: Colors.white,
+        fontSize: 16,
+        fontWeight: FontWeight.w500,
+      ),
+      cursorColor: const Color(0xFFFF7A00),
       decoration: InputDecoration(
         labelText: label,
         hintText: hintText,
-        prefixIcon:
-            prefixIcon != null ? Icon(prefixIcon) : null,
+
+        floatingLabelStyle: const TextStyle(
+          color: Color(0xFFFF7A00),
+          fontWeight: FontWeight.w600,
+        ),
+
+        labelStyle: const TextStyle(
+          color: Colors.white70,
+        ),
+
+        hintStyle: const TextStyle(
+          color: Colors.white38,
+        ),
+
+        prefixIcon: prefixIcon != null
+            ? Icon(
+                prefixIcon,
+                color: const Color(0xFFFF7A00),
+              )
+            : null,
+
         suffixIcon: suffixIcon,
+
+        filled: true,
+        fillColor: const Color(0xFF202020),
+
+        contentPadding: const EdgeInsets.symmetric(
+          horizontal: 20,
+          vertical: 18,
+        ),
+
+        enabledBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(18),
+          borderSide: BorderSide.none,
+        ),
+
+        focusedBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(18),
+          borderSide: const BorderSide(
+            color: Color(0xFFFF7A00),
+            width: 2,
+          ),
+        ),
+
+        errorBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(18),
+          borderSide: const BorderSide(
+            color: Colors.red,
+          ),
+        ),
+
+        focusedErrorBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(18),
+          borderSide: const BorderSide(
+            color: Colors.red,
+            width: 2,
+          ),
+        ),
       ),
     );
   }
