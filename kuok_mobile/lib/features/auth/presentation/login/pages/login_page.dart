@@ -12,17 +12,16 @@ class LoginPage extends StatelessWidget {
       backgroundColor: Color(0xFF0D0D0D),
       body: SafeArea(
         child: Padding(
-          padding: EdgeInsets.symmetric(
-            horizontal: 28,
-            vertical: 18,
-          ),
+          padding: EdgeInsets.symmetric(horizontal: 28),
           child: Column(
             children: [
+              SizedBox(height: 12),
+
               LoginHeader(),
 
-              SizedBox(height: 18),
+              SizedBox(height: 10),
 
-              Expanded(
+              Flexible(
                 child: LoginForm(),
               ),
             ],
